@@ -2,13 +2,15 @@ using dotnetproject.Interfaces ;
 using System;
 using dotnetproject.DTO ;
 
-namespace dotnetproject.ServiceObjects
+
+namespace dotnetproject.Services
 {
-    public class PositionSO : IItemUpdateStrategy 
+    public class ActivityService : IItemUpdateStrategy
     {
         public void UpdateItem(ItemDTO item)
         {
-            Console.WriteLine("PositionSO.UpdateItem()");
+            Console.WriteLine("ActivityService.UpdateItem()");
         }
+ 
     }
 }

@@ -1,6 +1,6 @@
 using System.Collections.Generic ;
 using dotnetproject.Interfaces ;
-using dotnetproject.ServiceObjects ;
+using dotnetproject.Services ;
 using dotnetproject.Dico ;
 using dotnetproject.DTO ;
 
@@ -12,9 +12,9 @@ namespace dotnetproject
 
 
         static Context () {
-            _strategies.Add(ENameTable.Activity, new ActivitySO());
-            _strategies.Add(ENameTable.Position, new PositionSO());
-            _strategies.Add(ENameTable.Status, new StatusSO());
+            _strategies.Add(ENameTable.Activity, new ActivityService());
+            _strategies.Add(ENameTable.Position, new PositionService());
+            _strategies.Add(ENameTable.Status, new StatusService());
         }
 
         public static void Update(ItemDTO item)

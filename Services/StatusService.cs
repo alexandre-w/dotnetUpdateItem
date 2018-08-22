@@ -2,13 +2,13 @@ using dotnetproject.Interfaces ;
 using System;
 using dotnetproject.DTO ;
 
-namespace dotnetproject.ServiceObjects
+namespace dotnetproject.Services
 {
-    public class StatusSO : IItemUpdateStrategy 
+    public class StatusService : IItemUpdateStrategy 
     {
         public void UpdateItem(ItemDTO item)
         {
-            Console.WriteLine("StatusSO.UpdateItem()");
+            Console.WriteLine("StatusService.UpdateItem()");
         }
     }
 }

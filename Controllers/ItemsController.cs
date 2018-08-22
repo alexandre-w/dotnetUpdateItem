@@ -13,7 +13,7 @@ namespace dotnetproject.Controllers
     [ApiController]
     public class ItemsController : ControllerBase 
     {
-        // GET api/values
+        // GET api/items
         // Get all the names from the Enum
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
@@ -27,11 +27,13 @@ namespace dotnetproject.Controllers
             return names ;
         }
 
-        // PUT api/values/5
+        // PUT api/items/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] ItemDTO item)
+        public ActionResult<string> Put(int id, [FromBody] ItemDTO item)
         {
             Context.Update(item);
+
+            return Ok(item);
         }
 
     }
